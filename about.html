@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>dBlogger</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">dBlogger</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Technology</a></li>
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Support</a></li>
+                            <li><a class="dropdown-item" href="contact.html">write to us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#loginModal"
+                      type="submit">Login</button>
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#signupModal"
+                      type="submit">SignUp</button>
+                  </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- loginModal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="inputPassword5" class="form-label">Password</label>
+              <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+              <div id="passwordHelpBlock" class="form-text">
+                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
+                special characters, or emoji.
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signupModal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="signup-form">
+            <form>
+              <h2>Register......</h2>
+              <p class="hint-text">Create your account.</p>
+              <div class="mb-3">
+                <div class="row">
+                  <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name"
+                      required="required"></div>
+                  <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name"
+                      required="required"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"
+                  required="required">
+              </div>
+              <div class="mb-3">
+                <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a
+                    href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+              </div>
+            </form>
+            <div class="text-center">Already have an account? <a href="#" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</a></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container my-5">
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Coding Community.<span class="text-muted">It'll
+                        blow your mind.</span></h2>
+                <p class="lead">Great codes can help you in your journey.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="a1.jpg" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Source Code for Free.<span class="text-muted">Free Content.</span></h2>
+                <p class="lead">Free code you can use or you can contribute.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="a2.jpg" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Tech Blog. <span class="text-muted">It'll
+                        blow your mind.</span></h2>
+                <p class="lead">Please do read our blog about new Tech.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="a3.jpg" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-item-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Technology.<span class="text-muted">It'll
+                        blow your mind.</span></h2>
+                <p class="lead">Introducing new Tech to the World.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" src="a4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center py-4 my-4 border-top">
+            <p>© 2022 D-Blogger, Inc. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
